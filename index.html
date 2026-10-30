@@ -15,12 +15,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #f7f1ec;
+      --cream: #f9f3eb;
       --blush: #ecd9d0;
       --rose: #d9b8ad;
       --ink: #3d3330;
       --muted: #8a7a73;
-      --gold: #b08d6a;
+      --gold: #8a7652;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
@@ -177,6 +177,13 @@
     .d5 { animation-delay: 1.1s; }
     @keyframes in { to { opacity: 1; transform: none; } }
 
+    .brand .logo {
+      display: block;
+      width: min(560px, 82vw);
+      height: auto;
+      margin: 0 auto;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .orb, .fade { animation: none; }
       .fade { opacity: 1; transform: none; }
@@ -189,13 +196,9 @@
   <div class="orb three"></div>
   <div class="grain"></div>
 
-  <header>
-    <div class="monogram fade d1">CS</div>
-  </header>
-
   <main>
     <p class="eyebrow fade d1">Aesthetics &amp; Beauty</p>
-    <h1 class="brand fade d2">Clinic <em>Setters</em></h1>
+    <h1 class="brand fade d2"><img class="logo" src="logo.png" alt="Clinic Setters" width="1130" height="319"></h1>
     <div class="divider fade d3" aria-hidden="true">
       <svg viewBox="0 0 10 10"><path d="M5 0 L6 4 L10 5 L6 6 L5 10 L4 6 L0 5 L4 4 Z" fill="currentColor"/></svg>
     </div>
