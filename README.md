@@ -1,5 +1,3 @@
 # Clinic Setters
 
-Coming soon landing page. Deployed to Cloudflare Workers from the `main` branch; every push to `main` redeploys automatically.
-
-The site lives in `public/`.
+Coming soon landing page, hosted on GitHub Pages from the `main` branch root. Every push to `main` redeploys automatically.
