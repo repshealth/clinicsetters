@@ -5,321 +5,285 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clinic Setters | Human Appointment Setting for Aesthetic &amp; Skin Clinics</title>
   <meta name="description" content="Real people who message your enquiries, followers and past clients for you, so your clinic has more conversations, more booked appointments and more revenue. Book your free audit call.">
-  <meta name="theme-color" content="#f9f3eb">
+  <meta name="theme-color" content="#f6f0e7">
   <meta property="og:title" content="Clinic Setters | Book Your Free Audit Call">
   <meta property="og:description" content="Human appointment setting for aesthetic and skin clinics. Less admin, more conversations, more booked appointments.">
   <meta property="og:image" content="logo.png">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%23f9f3eb'/><text x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%238a7652'>CS</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231f1a17'/><text x='32' y='42' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='24' fill='%23c2aa82'>CS</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #f9f3eb;
-      --cream-2: #f3eadf;
-      --white: #fffdf9;
-      --blush: #ecd9d0;
-      --ink: #3d3330;
-      --muted: #7f706a;
+      --bg: #f6f0e7;
+      --bg-2: #efe6d9;
+      --paper: #fbf8f3;
+      --ink: #1f1a17;
+      --ink-2: #2a2420;
+      --muted: #6d625b;
       --gold: #8a7652;
-      --gold-soft: #c2aa82;
-      --line: rgba(138, 118, 82, 0.22);
-      --radius: 22px;
-      --serif: "Cormorant Garamond", Georgia, serif;
-      --sans: "Montserrat", system-ui, sans-serif;
+      --gold-light: #c2aa82;
+      --line: rgba(31, 26, 23, 0.12);
+      --line-dark: rgba(246, 240, 231, 0.14);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: var(--sans);
-      font-weight: 400;
-      background: var(--cream);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-variation-settings: "wdth" 100;
+      font-size: 16px;
+      line-height: 1.55;
+      letter-spacing: -0.006em;
+      background: var(--bg);
       color: var(--ink);
-      line-height: 1.7;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; }
 
-    .wrap { width: min(1140px, 100% - 40px); margin: 0 auto; }
-    .narrow { width: min(760px, 100% - 40px); margin: 0 auto; }
+    .wrap { width: min(1200px, 100% - 48px); margin: 0 auto; }
 
     /* type */
-    .eyebrow {
-      font-size: 11px;
+    .display, h2 {
+      font-variation-settings: "wdth" 118;
       font-weight: 600;
-      letter-spacing: 0.34em;
-      text-transform: uppercase;
-      color: var(--gold);
+      letter-spacing: -0.045em;
+      line-height: 0.98;
     }
-    h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; color: var(--ink); }
-    h1 { font-size: clamp(42px, 6.4vw, 78px); letter-spacing: -0.01em; }
-    h2 { font-size: clamp(34px, 4.6vw, 56px); letter-spacing: -0.005em; }
-    h3 { font-size: 26px; line-height: 1.2; }
-    h1 em, h2 em { font-style: italic; color: var(--gold); }
-    .lead { font-size: clamp(15px, 1.6vw, 18px); font-weight: 300; color: var(--muted); }
-    .center { text-align: center; }
+    .display { font-size: clamp(46px, 7.6vw, 108px); }
+    h2 { font-size: clamp(36px, 5vw, 68px); }
+    h3 {
+      font-variation-settings: "wdth" 110;
+      font-weight: 600;
+      font-size: 21px;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+    .muted { color: var(--muted); }
+    .lead { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.5; color: var(--muted); max-width: 34em; }
+
+    /* section label: number + name on a rule */
+    .label {
+      display: flex; gap: 14px; align-items: baseline;
+      padding-top: 18px; border-top: 1px solid var(--line);
+      font-size: 13px; color: var(--muted);
+    }
+    .label b { font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
 
     /* buttons */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 18px 32px;
-      border-radius: 999px;
-      background: var(--ink);
-      color: var(--cream);
+      display: inline-flex; align-items: center; gap: 14px;
+      padding: 17px 24px 17px 26px;
+      border-radius: 4px;
+      background: var(--ink); color: var(--bg);
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-      box-shadow: 0 14px 30px -14px rgba(61, 51, 48, 0.55);
+      font-size: 15px; font-weight: 500; letter-spacing: -0.01em;
+      transition: background .2s ease;
     }
-    .btn:hover { transform: translateY(-2px); background: #2c2421; box-shadow: 0 20px 36px -16px rgba(61, 51, 48, 0.6); }
-    .btn svg { width: 16px; height: 16px; transition: transform .25s ease; }
-    .btn:hover svg { transform: translateX(3px); }
-    .btn.gold { background: var(--gold); box-shadow: 0 14px 30px -14px rgba(138, 118, 82, 0.7); }
-    .btn.gold:hover { background: #75643f; }
-    .btn.small { padding: 12px 22px; font-size: 11px; box-shadow: none; }
-    .reassure { margin-top: 14px; font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+    .btn:hover { background: var(--gold); }
+    .btn .arr { transition: transform .2s ease; }
+    .btn:hover .arr { transform: translateX(4px); }
+    .btn.light { background: var(--bg); color: var(--ink); }
+    .btn.light:hover { background: var(--gold-light); }
+    .btn.sm { padding: 10px 16px; font-size: 14px; }
+    .note { margin-top: 14px; font-size: 13px; color: var(--muted); }
 
     /* nav */
     nav {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(249, 243, 235, 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color .3s ease;
+      background: rgba(246, 240, 231, 0.9);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
-    nav.scrolled { border-bottom-color: var(--line); }
-    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-    nav .brand img { height: 38px; width: auto; }
-    nav .links { display: flex; align-items: center; gap: 30px; }
-    nav .links a.text { font-size: 13px; text-decoration: none; color: var(--muted); transition: color .2s; }
-    nav .links a.text:hover { color: var(--ink); }
-
-    /* background decoration */
-    .orb { position: absolute; border-radius: 50%; filter: blur(70px); pointer-events: none; z-index: 0; }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    nav .brand img { height: 30px; width: auto; }
+    nav .links { display: flex; align-items: center; gap: 28px; font-size: 14px; }
+    nav .links a.t { text-decoration: none; color: var(--muted); }
+    nav .links a.t:hover { color: var(--ink); }
 
     section { position: relative; }
-    .pad { padding: clamp(80px, 11vw, 140px) 0; }
+    .pad { padding: clamp(72px, 10vw, 128px) 0; }
 
     /* hero */
-    .hero { padding: clamp(50px, 8vw, 100px) 0 clamp(80px, 10vw, 130px); overflow: hidden; }
-    .hero .orb.a { width: 560px; height: 560px; background: radial-gradient(circle, var(--blush), transparent 70%); top: -180px; left: -200px; }
-    .hero .orb.b { width: 620px; height: 620px; background: radial-gradient(circle, #efe0cc, transparent 70%); bottom: -260px; right: -180px; }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
-    .hero h1 { margin: 22px 0 24px; }
-    .hero .lead { max-width: 520px; margin-bottom: 36px; }
-    .hero-points { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; }
-    .hero-points span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
-    .hero-points svg { width: 16px; height: 16px; color: var(--gold); flex: none; }
-
-    /* chat illustration */
-    .phone {
-      position: relative;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      padding: 22px 20px 26px;
-      box-shadow: 0 40px 80px -40px rgba(61, 51, 48, 0.35);
-      max-width: 400px;
-      margin-left: auto;
+    .hero { padding: clamp(56px, 8vw, 104px) 0 clamp(64px, 8vw, 96px); }
+    .hero .kicker { font-size: 14px; color: var(--muted); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+    .hero .kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    .hero .display { max-width: 11.5em; }
+    .hero-bottom {
+      display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: start;
+      margin-top: clamp(40px, 5vw, 64px);
     }
-    .phone-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
-    .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--blush), var(--gold-soft)); display: grid; place-items: center; font-family: var(--serif); font-size: 18px; color: var(--white); }
-    .phone-head strong { display: block; font-size: 14px; font-weight: 600; }
-    .phone-head small { font-size: 11px; color: var(--muted); }
-    .bubble { max-width: 82%; padding: 11px 15px; border-radius: 18px; font-size: 13px; line-height: 1.5; margin-bottom: 10px; opacity: 0; transform: translateY(8px); }
-    .bubble.them { background: var(--cream-2); border-bottom-left-radius: 6px; }
-    .bubble.us { background: var(--ink); color: var(--cream); margin-left: auto; border-bottom-right-radius: 6px; }
-    .phone.play .bubble { animation: pop .5s ease forwards; }
-    .phone.play .bubble:nth-child(2) { animation-delay: .3s; }
-    .phone.play .bubble:nth-child(3) { animation-delay: 1.1s; }
-    .phone.play .bubble:nth-child(4) { animation-delay: 1.9s; }
-    .phone.play .bubble:nth-child(5) { animation-delay: 2.7s; }
-    .phone.play .booked { animation: pop .5s ease 3.5s forwards; }
+    .hero .lead { margin-bottom: 32px; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+    .hero-proof span::before { content: "+ "; color: var(--gold); }
+
+    /* chat mock */
+    .chat {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 16px 20px;
+    }
+    .chat-head { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .chat-head .av { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-2); display: grid; place-items: center; font-weight: 600; font-size: 13px; color: var(--gold); }
+    .chat-head strong { display: block; font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+    .chat-head small { font-size: 12px; color: var(--muted); }
+    .msg { max-width: 84%; padding: 9px 13px; border-radius: 14px; font-size: 13.5px; line-height: 1.45; margin-bottom: 8px; opacity: 0; transform: translateY(6px); }
+    .msg.them { background: var(--bg-2); border-bottom-left-radius: 4px; }
+    .msg.us { background: var(--ink); color: var(--bg); margin-left: auto; border-bottom-right-radius: 4px; }
+    .chat.play .msg { animation: pop .45s ease forwards; }
+    .chat.play .msg:nth-of-type(3) { animation-delay: .9s; }
+    .chat.play .msg:nth-of-type(4) { animation-delay: 1.8s; }
+    .chat.play .msg:nth-of-type(5) { animation-delay: 2.7s; }
+    .chat.play .done { animation: pop .45s ease 3.6s forwards; }
     @keyframes pop { to { opacity: 1; transform: none; } }
-    .booked {
-      margin-top: 16px; padding: 14px 16px; border-radius: 16px;
-      background: linear-gradient(135deg, rgba(194, 170, 130, 0.18), rgba(236, 217, 208, 0.4));
-      border: 1px solid var(--line);
-      display: flex; align-items: center; gap: 12px;
-      opacity: 0; transform: translateY(8px);
+    .done {
+      margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+      border: 1px solid var(--gold-light); background: rgba(194, 170, 130, 0.12);
+      display: flex; justify-content: space-between; align-items: center; gap: 10px;
+      font-size: 13px; opacity: 0; transform: translateY(6px);
     }
-    .booked .tick { width: 32px; height: 32px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; flex: none; }
-    .booked .tick svg { width: 16px; height: 16px; color: var(--white); }
-    .booked strong { display: block; font-size: 13px; font-weight: 600; }
-    .booked small { font-size: 11px; color: var(--muted); }
-    .phone-note { margin-top: 14px; text-align: right; font-size: 11px; color: var(--muted); font-style: italic; max-width: 400px; margin-left: auto; }
+    .done strong { font-weight: 600; }
+    .done span { color: var(--muted); }
+    .chat-cap { margin-top: 10px; font-size: 12px; color: var(--muted); }
 
-    /* problem */
-    .problem { background: var(--white); }
-    .section-head { max-width: 720px; margin: 0 auto 64px; text-align: center; }
-    .section-head h2 { margin: 18px 0 20px; }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .card {
-      background: var(--cream);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 34px 28px;
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -28px rgba(61, 51, 48, 0.35); }
-    .icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; margin-bottom: 22px; color: var(--gold); background: var(--white); }
-    .icon svg { width: 22px; height: 22px; }
-    .card h3 { font-size: 23px; margin-bottom: 10px; }
-    .card p { font-size: 14px; color: var(--muted); }
-    .truth {
-      margin: 64px auto 0; max-width: 760px; text-align: center;
-      font-family: var(--serif); font-style: italic; font-size: clamp(24px, 3vw, 34px); line-height: 1.35; color: var(--ink);
-    }
-    .truth span { color: var(--gold); }
+    /* editorial two column block */
+    .ed { display: grid; grid-template-columns: 280px 1fr; gap: 48px; }
+    .ed .head h2 { margin-bottom: 24px; }
 
-    /* solution */
-    .solution { overflow: hidden; }
-    .solution .orb { width: 520px; height: 520px; background: radial-gradient(circle, var(--blush), transparent 70%); top: 10%; right: -220px; }
-    .split { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-    .split h2 { margin: 18px 0 22px; }
-    .split .lead + .lead { margin-top: 16px; }
-    .split .btn { margin-top: 34px; }
-    .checklist { list-style: none; display: grid; gap: 14px; }
-    .checklist li {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: var(--white); border: 1px solid var(--line); border-radius: 18px;
-      padding: 20px 22px;
+    /* problem grid */
+    .grid4 { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); margin-top: 56px; }
+    .cell { padding: 32px 32px 36px 0; border-bottom: 1px solid var(--line); }
+    .cell:nth-child(odd) { border-right: 1px solid var(--line); }
+    .cell:nth-child(even) { padding-left: 32px; padding-right: 0; }
+    .cell .n { font-size: 13px; color: var(--gold); font-variant-numeric: tabular-nums; margin-bottom: 18px; display: block; }
+    .cell h3 { margin-bottom: 10px; }
+    .cell p { color: var(--muted); font-size: 15px; max-width: 30em; }
+    .pull {
+      margin-top: 64px;
+      font-variation-settings: "wdth" 115; font-weight: 500;
+      font-size: clamp(26px, 3.2vw, 42px); letter-spacing: -0.035em; line-height: 1.1;
+      max-width: 18em;
     }
-    .checklist .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--gold); flex: none; display: grid; place-items: center; margin-top: 1px; }
-    .checklist .dot svg { width: 13px; height: 13px; color: var(--white); }
-    .checklist strong { display: block; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
-    .checklist span { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+    .pull span { color: var(--muted); }
 
-    /* human */
-    .human { background: var(--ink); color: var(--cream); overflow: hidden; }
-    .human .orb { width: 600px; height: 600px; background: radial-gradient(circle, rgba(138, 118, 82, 0.35), transparent 70%); top: -260px; left: 50%; transform: translateX(-50%); }
-    .human .section-head { position: relative; z-index: 1; }
-    .human h2 { color: var(--cream); }
-    .human h2 em { color: var(--gold-soft); }
-    .human .eyebrow { color: var(--gold-soft); }
-    .human .lead { color: rgba(249, 243, 235, 0.7); }
-    .compare { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 920px; margin: 0 auto; }
-    .compare-col { border-radius: var(--radius); padding: 36px 34px; }
-    .compare-col.bot { background: rgba(249, 243, 235, 0.05); border: 1px solid rgba(249, 243, 235, 0.12); }
-    .compare-col.person { background: var(--cream); color: var(--ink); }
-    .compare-col h3 { font-size: 28px; margin-bottom: 22px; }
-    .compare-col.bot h3 { color: rgba(249, 243, 235, 0.75); }
-    .compare-col ul { list-style: none; display: grid; gap: 14px; }
-    .compare-col li { display: flex; gap: 12px; font-size: 14px; line-height: 1.55; }
-    .compare-col li svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
-    .compare-col.bot li { color: rgba(249, 243, 235, 0.6); }
-    .compare-col.bot li svg { color: rgba(249, 243, 235, 0.35); }
-    .compare-col.person li svg { color: var(--gold); }
+    /* rows list */
+    .rows { list-style: none; border-top: 1px solid var(--line); }
+    .rows li {
+      display: grid; grid-template-columns: 48px 1fr 1.2fr; gap: 24px; align-items: baseline;
+      padding: 22px 0; border-bottom: 1px solid var(--line);
+    }
+    .rows .n { font-size: 13px; color: var(--gold); font-variant-numeric: tabular-nums; }
+    .rows h3 { font-size: 19px; }
+    .rows p { color: var(--muted); font-size: 15px; }
+
+    .bg2 { background: var(--paper); }
+
+    /* human (dark) */
+    .dark { background: var(--ink); color: var(--bg); }
+    .dark .label { border-color: var(--line-dark); color: rgba(246,240,231,.6); }
+    .dark .label b { color: var(--bg); }
+    .dark .lead { color: rgba(246,240,231,.66); }
+    .vs { display: grid; grid-template-columns: 1fr 1fr; margin-top: 64px; border-top: 1px solid var(--line-dark); }
+    .vs > div { padding: 32px 40px 8px 0; }
+    .vs > div + div { padding: 32px 0 8px 40px; border-left: 1px solid var(--line-dark); }
+    .vs h3 { font-size: 24px; margin-bottom: 20px; }
+    .vs ul { list-style: none; }
+    .vs li { padding: 14px 0; border-bottom: 1px solid var(--line-dark); display: flex; gap: 14px; font-size: 16px; }
+    .vs li:last-child { border-bottom: 0; }
+    .vs li i { font-style: normal; width: 14px; flex: none; }
+    .vs .bot h3, .vs .bot li { color: rgba(246,240,231,.45); }
+    .vs .person li i { color: var(--gold-light); }
 
     /* outcomes */
-    .outcomes-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .outcome { padding: 44px 30px; text-align: center; border-right: 1px solid var(--line); }
-    .outcome:last-child { border-right: 0; }
-    .outcome .num { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--gold); }
-    .outcome h3 { font-size: 32px; margin: 10px 0 10px; }
-    .outcome p { font-size: 13.5px; color: var(--muted); }
+    .outcomes { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); margin-top: 56px; }
+    .outcomes > div { padding: 28px 24px 0 0; }
+    .outcomes > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+    .outcomes .big {
+      font-variation-settings: "wdth" 118; font-weight: 600; letter-spacing: -0.04em;
+      font-size: clamp(28px, 3vw, 40px); line-height: 1; margin-bottom: 14px;
+    }
+    .outcomes p { color: var(--muted); font-size: 15px; }
 
     /* steps */
-    .steps-section { background: var(--white); }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: s; }
-    .step { position: relative; padding: 40px 32px 36px; border-radius: var(--radius); background: var(--cream); border: 1px solid var(--line); }
-    .step .n { font-family: var(--serif); font-size: 64px; line-height: 1; color: var(--gold-soft); margin-bottom: 18px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+    .step { border-top: 2px solid var(--ink); padding-top: 22px; }
+    .step .n { font-variation-settings: "wdth" 118; font-weight: 600; font-size: 15px; margin-bottom: 40px; display: block; }
     .step h3 { margin-bottom: 10px; }
-    .step p { font-size: 14px; color: var(--muted); }
+    .step p { color: var(--muted); font-size: 15px; }
 
     /* audit */
-    .audit-box {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-      background: linear-gradient(135deg, var(--white), var(--cream-2));
-      border: 1px solid var(--line); border-radius: 32px;
-      padding: clamp(36px, 6vw, 72px);
-    }
-    .audit-box h2 { margin: 18px 0 18px; }
-    .audit-box .btn { margin-top: 30px; }
+    .audit { background: var(--bg-2); border-radius: 6px; padding: clamp(32px, 6vw, 72px); display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; }
+    .audit h2 { font-size: clamp(32px, 4vw, 54px); margin-bottom: 22px; }
+    .audit .btn { margin-top: 32px; }
+    .audit .rows li { grid-template-columns: 36px 1fr; gap: 16px; }
+    .audit .rows h3 { margin-bottom: 4px; }
 
     /* who */
-    .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 820px; margin: 0 auto; }
-    .tag { padding: 12px 22px; border-radius: 999px; border: 1px solid var(--line); background: var(--white); font-size: 14px; }
+    .who { font-variation-settings: "wdth" 112; font-weight: 500; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; line-height: 1.35; max-width: 26em; }
+    .who span { color: var(--gold); padding: 0 .35em; font-weight: 300; }
 
     /* faq */
-    .faq { background: var(--white); }
     .faq-list { border-top: 1px solid var(--line); }
     details { border-bottom: 1px solid var(--line); }
     summary {
       list-style: none; cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center; gap: 20px;
-      padding: 26px 4px;
-      font-family: var(--serif); font-size: 23px; line-height: 1.3;
+      display: flex; justify-content: space-between; align-items: center; gap: 24px;
+      padding: 24px 0;
+      font-variation-settings: "wdth" 108; font-weight: 500; font-size: 19px; letter-spacing: -0.02em;
     }
     summary::-webkit-details-marker { display: none; }
-    summary .plus { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; flex: none; transition: transform .3s ease, background .3s; color: var(--gold); }
-    summary .plus svg { width: 12px; height: 12px; }
-    details[open] summary .plus { transform: rotate(45deg); background: var(--cream); }
-    details p { padding: 0 4px 28px; font-size: 15px; color: var(--muted); max-width: 640px; }
+    summary .pm { font-weight: 300; font-size: 24px; line-height: 1; color: var(--gold); transition: transform .25s ease; }
+    details[open] summary .pm { transform: rotate(45deg); }
+    details p { padding: 0 0 26px; color: var(--muted); max-width: 40em; }
 
-    /* final cta */
-    .final { overflow: hidden; text-align: center; }
-    .final .orb.a { width: 520px; height: 520px; background: radial-gradient(circle, var(--blush), transparent 70%); top: -100px; left: -160px; }
-    .final .orb.b { width: 520px; height: 520px; background: radial-gradient(circle, #efe0cc, transparent 70%); bottom: -200px; right: -160px; }
-    .final .inner { position: relative; z-index: 1; }
-    .final h2 { margin: 20px auto 22px; max-width: 760px; }
-    .final .lead { max-width: 560px; margin: 0 auto 38px; }
+    /* final */
+    .final h2 { font-size: clamp(42px, 6.8vw, 96px); max-width: 12em; margin: 40px 0 28px; }
+    .final .lead { margin-bottom: 36px; }
 
-    footer { border-top: 1px solid var(--line); padding: 36px 0; }
-    footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
-    footer img { height: 30px; width: auto; }
-    footer small { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 28px 0; }
+    footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+    footer img { height: 24px; width: auto; }
 
     /* reveal */
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
-    .reveal.in { opacity: 1; transform: none; }
-    .reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; } .reveal.d3 { transition-delay: .24s; }
+    .rv { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+    .rv.in { opacity: 1; transform: none; }
 
-    /* mobile sticky cta */
     .mobile-cta { display: none; }
 
     @media (max-width: 980px) {
-      .hero-grid, .split, .audit-box { grid-template-columns: 1fr; gap: 50px; }
-      .phone, .phone-note { margin: 0 auto; }
-      .phone-note { text-align: center; margin-top: 14px; }
-      .cards { grid-template-columns: 1fr 1fr; }
-      .outcomes-grid { grid-template-columns: 1fr 1fr; }
-      .outcome:nth-child(2) { border-right: 0; }
-      .outcome:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .steps { grid-template-columns: 1fr; }
-      nav .links a.text { display: none; }
+      .hero-bottom { grid-template-columns: 1fr; gap: 48px; }
+      .chat-wrap { max-width: 420px; }
+      .ed { grid-template-columns: 1fr; gap: 28px; }
+      .audit { grid-template-columns: 1fr; gap: 40px; }
+      .outcomes { grid-template-columns: 1fr 1fr; }
+      .outcomes > div:nth-child(3) { border-left: 0; padding-left: 0; }
+      .outcomes > div { padding-bottom: 28px; }
+      .outcomes > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .rows li { grid-template-columns: 40px 1fr; }
+      .rows li p { grid-column: 2; }
+      nav .links a.t { display: none; }
     }
     @media (max-width: 640px) {
-      .cards, .compare { grid-template-columns: 1fr; }
-      .outcomes-grid { grid-template-columns: 1fr; }
-      .outcome { border-right: 0; border-bottom: 1px solid var(--line); }
-      .outcome:last-child { border-bottom: 0; }
-      nav .brand img { height: 30px; }
-      nav .btn.small { padding: 10px 16px; font-size: 10px; }
-      .btn { width: 100%; }
+      .wrap { width: calc(100% - 32px); }
+      .grid4, .vs, .steps { grid-template-columns: 1fr; }
+      .cell, .cell:nth-child(even) { padding: 26px 0 28px; border-right: 0; }
+      .vs > div, .vs > div + div { padding: 28px 0 8px; border-left: 0; }
+      .vs > div + div { border-top: 1px solid var(--line-dark); }
+      .outcomes { grid-template-columns: 1fr; }
+      .outcomes > div, .outcomes > div + div { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+      .outcomes > div:last-child { border-bottom: 0; }
+      .btn { width: 100%; justify-content: space-between; }
       nav .btn { width: auto; }
-      summary { font-size: 20px; }
-      .mobile-cta {
-        display: block; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60;
-        transform: translateY(120%); transition: transform .35s ease;
-      }
+      nav .brand img { height: 24px; }
+      .mobile-cta { display: block; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; transform: translateY(130%); transition: transform .3s ease; }
       .mobile-cta.show { transform: none; }
-      .mobile-cta .btn { box-shadow: 0 16px 40px -10px rgba(61,51,48,.6); }
-      footer { padding-bottom: 96px; }
+      footer { padding-bottom: 92px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .bubble, .booked { opacity: 1; transform: none; animation: none !important; }
+      .rv, .msg, .done { opacity: 1; transform: none; transition: none; animation: none !important; }
     }
   </style>
 </head>
@@ -329,138 +293,118 @@
     <div class="wrap">
       <a class="brand" href="#top" aria-label="Clinic Setters home"><img src="logo.png" alt="Clinic Setters" width="1130" height="319"></a>
       <div class="links">
-        <a class="text" href="#how">How it works</a>
-        <a class="text" href="#human">Why human</a>
-        <a class="text" href="#faq">FAQs</a>
-        <a class="btn small js-book" href="#book">Book free audit</a>
+        <a class="t" href="#how">How it works</a>
+        <a class="t" href="#human">Why human</a>
+        <a class="t" href="#faq">FAQs</a>
+        <a class="btn sm js-book" href="#book">Book free audit</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="orb a"></div><div class="orb b"></div>
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow reveal">Human appointment setting for clinics</p>
-        <h1 class="reveal d1">You focus on your clients. <em>We fill your diary.</em></h1>
-        <p class="lead reveal d2">Clinic Setters gives aesthetic and skin clinics a team of real, trained people who message your enquiries, followers and past clients for you. Less admin, more conversations, more booked appointments.</p>
-        <div class="reveal d3">
-          <a class="btn js-book" href="#book">Book your free audit call
-            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <p class="reassure">Free, no obligation. Find out where bookings are slipping through.</p>
-        </div>
-        <div class="hero-points reveal d3">
-          <span><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Real people, never bots</span>
-          <span><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Your clinic's voice</span>
-          <span><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Booked into your diary</span>
-        </div>
-      </div>
+    <div class="wrap">
+      <p class="kicker rv">Human appointment setting for aesthetic &amp; skin clinics</p>
+      <h1 class="display rv">You focus on your clients. We fill your diary.</h1>
 
-      <div class="reveal d2">
-        <div class="phone" id="phone">
-          <div class="phone-head">
-            <div class="avatar">C</div>
-            <div><strong>Your Clinic</strong><small>Messaged by your Clinic Setter</small></div>
-          </div>
-          <div class="bubble them">Hi! How much is your skin booster treatment? 😊</div>
-          <div class="bubble us">Hi Emma, lovely to hear from you! It depends on your skin goals. What are you hoping to improve?</div>
-          <div class="bubble them">Mainly dullness and some fine lines around my eyes</div>
-          <div class="bubble us">That's exactly what our consultations are for. We have Thursday at 4pm or Saturday at 10am, which suits you best?</div>
-          <div class="booked">
-            <div class="tick"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><strong>Consultation booked</strong><small>Saturday, 10:00am · added to your diary</small></div>
+      <div class="hero-bottom">
+        <div class="rv">
+          <p class="lead">A team of real, trained people who message your enquiries, followers and past clients for you. Less admin, more conversations, more booked appointments.</p>
+          <a class="btn js-book" href="#book">Book your free audit call <span class="arr">→</span></a>
+          <p class="note">Free, no obligation. See where bookings are slipping through.</p>
+          <div class="hero-proof">
+            <span>Real people, never bots</span>
+            <span>Written in your clinic's voice</span>
+            <span>Booked straight into your diary</span>
           </div>
         </div>
-        <p class="phone-note">Illustrative example conversation</p>
+
+        <div class="chat-wrap rv">
+          <div class="chat" id="chat">
+            <div class="chat-head">
+              <div class="av">YC</div>
+              <div><strong>Your Clinic</strong><small>Messaged by your Clinic Setter</small></div>
+            </div>
+            <div class="msg them">Hi! How much is your skin booster treatment?</div>
+            <div class="msg us">Hi Emma, lovely to hear from you! It depends on your skin goals. What are you hoping to improve?</div>
+            <div class="msg them">Mainly dullness and some fine lines around my eyes</div>
+            <div class="msg us">That's exactly what our consultations are for. We have Thursday at 4pm or Saturday at 10am, which suits you?</div>
+            <div class="done"><strong>Consultation booked</strong><span>Sat, 10:00am</span></div>
+          </div>
+          <p class="chat-cap">Illustrative example</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="problem pad">
+  <section class="pad bg2">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">Sound familiar?</p>
-        <h2 class="reveal d1">You know you should be messaging. <em>You just don't have the hours.</em></h2>
-        <p class="lead reveal d2">Following up enquiries, replying to DMs and checking in with past clients is how a clinic fills its diary. But it's the first thing to slip when you're busy actually running one.</p>
-      </div>
-      <div class="cards">
-        <div class="card reveal">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-          <h3>A full day in clinic</h3>
-          <p>By the time your last client leaves, the last thing you want is another hour on your phone answering messages.</p>
-        </div>
-        <div class="card reveal d1">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><circle cx="16.6" cy="7.4" r=".9" fill="currentColor"/></svg></div>
-          <h3>Already juggling socials</h3>
-          <p>Posting, filming and creating content already takes up your spare time. The inbox keeps growing behind it.</p>
-        </div>
-        <div class="card reveal d2">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 17.5V7a2.5 2.5 0 012.5-2.5h9A2.5 2.5 0 0119 7v6a2.5 2.5 0 01-2.5 2.5H9L5 18.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9.5 9.5l5 3M14.5 9.5l-5 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-          <h3>Messaging strangers feels awkward</h3>
-          <p>Reaching out first, chasing replies and asking for the booking can feel uncomfortable and salesy. So it gets put off.</p>
-        </div>
-        <div class="card reveal d3">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16l5-5 4 4 7-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Warm leads go cold</h3>
-          <p>An enquiry left for a day is often a client who booked somewhere else. Every unanswered message is revenue walking away.</p>
+      <div class="ed">
+        <div class="label rv"><b>01</b> The problem</div>
+        <div>
+          <h2 class="rv">You know you should be messaging. You just don't have the hours.</h2>
+          <p class="lead rv" style="margin-top:24px">Following up enquiries, replying to DMs and checking in with past clients is how a clinic fills its diary. It's also the first thing to slip when you're busy actually running one.</p>
         </div>
       </div>
-      <p class="truth reveal">You already know how important it is. <span>So let us take it over.</span></p>
+
+      <div class="grid4">
+        <div class="cell rv"><span class="n">A</span><h3>A full day in clinic</h3><p>By the time your last client leaves, the last thing you want is another hour on your phone answering messages.</p></div>
+        <div class="cell rv"><span class="n">B</span><h3>Already juggling socials</h3><p>Posting, filming and creating content takes up your spare time. The inbox keeps growing behind it.</p></div>
+        <div class="cell rv"><span class="n">C</span><h3>Messaging strangers feels awkward</h3><p>Reaching out first, chasing replies and asking for the booking can feel uncomfortable. So it gets put off.</p></div>
+        <div class="cell rv"><span class="n">D</span><h3>Warm leads go cold</h3><p>An enquiry left for a day is often a client who booked somewhere else. Every unanswered message is revenue walking away.</p></div>
+      </div>
+
+      <p class="pull rv">You already know how important it is. <span>So let us take it over.</span></p>
     </div>
   </section>
 
   <!-- SOLUTION -->
-  <section class="solution pad" id="what">
-    <div class="orb"></div>
-    <div class="wrap split">
+  <section class="pad" id="what">
+    <div class="wrap ed">
+      <div class="label rv"><b>02</b> What we do</div>
       <div>
-        <p class="eyebrow reveal">Let us take it off your plate</p>
-        <h2 class="reveal d1">Your own appointment setter, <em>without hiring one.</em></h2>
-        <p class="lead reveal d2">We place a real, trained setter on your clinic's messages. They learn your treatments, your prices and your tone, then handle the conversations you never have time for.</p>
-        <p class="lead reveal d2">You walk into clinic and the consultations are already in the diary.</p>
-        <a class="btn gold js-book reveal d3" href="#book">Book your free audit call
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <h2 class="rv">Your own appointment setter, without hiring one.</h2>
+        <p class="lead rv" style="margin:24px 0 48px">We place a real, trained setter on your clinic's messages. They learn your treatments, prices and tone, then handle the conversations you never have time for. You walk into clinic and the consultations are already in the diary.</p>
+        <ul class="rows">
+          <li class="rv"><span class="n">01</span><h3>Reply to new enquiries, fast</h3><p>Instagram, Facebook and website enquiries answered while people are still keen.</p></li>
+          <li class="rv"><span class="n">02</span><h3>Follow up the ones that went quiet</h3><p>Polite, well timed follow ups so interested people don't slip away.</p></li>
+          <li class="rv"><span class="n">03</span><h3>Start conversations with your audience</h3><p>Reaching out to engaged followers, so you never have to message strangers.</p></li>
+          <li class="rv"><span class="n">04</span><h3>Bring past clients back</h3><p>Friendly check ins that turn your existing client list into rebookings.</p></li>
+          <li class="rv"><span class="n">05</span><h3>Book them into your diary</h3><p>Conversations turned into confirmed consultations and treatments.</p></li>
+        </ul>
+        <a class="btn js-book rv" href="#book" style="margin-top:40px">Book your free audit call <span class="arr">→</span></a>
       </div>
-      <ul class="checklist">
-        <li class="reveal"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Reply to new enquiries, fast</strong><span>Instagram, Facebook and website enquiries answered while they're still keen.</span></div></li>
-        <li class="reveal d1"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Follow up the ones that went quiet</strong><span>Polite, well timed follow ups so interested people don't slip away.</span></div></li>
-        <li class="reveal d2"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Start conversations with your audience</strong><span>Reaching out to engaged followers so you don't have to message strangers.</span></div></li>
-        <li class="reveal d2"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Bring past clients back</strong><span>Friendly check ins that turn your existing client list into rebookings.</span></div></li>
-        <li class="reveal d3"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Book them straight into your diary</strong><span>Conversations turned into confirmed consultations and treatments.</span></div></li>
-      </ul>
     </div>
   </section>
 
   <!-- HUMAN -->
-  <section class="human pad" id="human">
-    <div class="orb"></div>
+  <section class="pad dark" id="human">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">Why human</p>
-        <h2 class="reveal d1">Your clients can tell the difference. <em>So can your diary.</em></h2>
-        <p class="lead reveal d2">Aesthetics and skin are personal. People want reassurance, warmth and real answers before they book. That's something a chatbot can't give them.</p>
+      <div class="ed">
+        <div class="label rv"><b>03</b> Why human</div>
+        <div>
+          <h2 class="rv">Your clients can tell the difference. So can your diary.</h2>
+          <p class="lead rv" style="margin-top:24px">Aesthetics and skin are personal. People want reassurance, warmth and real answers before they book. A chatbot can't give them that.</p>
+        </div>
       </div>
-      <div class="compare">
-        <div class="compare-col bot reveal">
+      <div class="vs">
+        <div class="bot rv">
           <h3>Automated bots</h3>
           <ul>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Scripted replies that miss the question</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Can't read nerves, hesitation or concerns</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Feels cold for a personal treatment</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Risks making your clinic look impersonal</li>
+            <li><i>×</i>Scripted replies that miss the question</li>
+            <li><i>×</i>Can't read nerves, hesitation or concerns</li>
+            <li><i>×</i>Feels cold for a personal treatment</li>
+            <li><i>×</i>Makes your clinic look impersonal</li>
           </ul>
         </div>
-        <div class="compare-col person reveal d1">
+        <div class="person rv">
           <h3>A Clinic Setter</h3>
           <ul>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Real conversations, written by a real person</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Picks up on concerns and puts people at ease</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sounds like your clinic, not a script</li>
-            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Guides the conversation all the way to a booking</li>
+            <li><i>+</i>Real conversations, written by a real person</li>
+            <li><i>+</i>Picks up on concerns and puts people at ease</li>
+            <li><i>+</i>Sounds like your clinic, not a script</li>
+            <li><i>+</i>Guides the conversation all the way to a booking</li>
           </ul>
         </div>
       </div>
@@ -470,30 +414,30 @@
   <!-- OUTCOMES -->
   <section class="pad">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">What changes</p>
-        <h2 class="reveal d1">More of what grows your clinic. <em>Less of what drains you.</em></h2>
+      <div class="ed">
+        <div class="label rv"><b>04</b> What changes</div>
+        <h2 class="rv">More of what grows your clinic. Less of what drains you.</h2>
       </div>
-      <div class="outcomes-grid">
-        <div class="outcome reveal"><p class="num">01</p><h3>Less admin</h3><p>Hand over the inbox and get your evenings back.</p></div>
-        <div class="outcome reveal d1"><p class="num">02</p><h3>More conversations</h3><p>Every enquiry answered, every warm lead followed up.</p></div>
-        <div class="outcome reveal d2"><p class="num">03</p><h3>More appointments</h3><p>Conversations guided through to confirmed bookings.</p></div>
-        <div class="outcome reveal d3"><p class="num">04</p><h3>More revenue</h3><p>A fuller diary from the audience you already have.</p></div>
+      <div class="outcomes">
+        <div class="rv"><p class="big">Less admin</p><p>Hand over the inbox and get your evenings back.</p></div>
+        <div class="rv"><p class="big">More chats</p><p>Every enquiry answered, every warm lead followed up.</p></div>
+        <div class="rv"><p class="big">More bookings</p><p>Conversations guided through to confirmed appointments.</p></div>
+        <div class="rv"><p class="big">More revenue</p><p>A fuller diary from the audience you already have.</p></div>
       </div>
     </div>
   </section>
 
   <!-- HOW -->
-  <section class="steps-section pad" id="how">
+  <section class="pad bg2" id="how">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">How it works</p>
-        <h2 class="reveal d1">Up and running, <em>without the hassle.</em></h2>
+      <div class="ed">
+        <div class="label rv"><b>05</b> How it works</div>
+        <h2 class="rv">Up and running, without the hassle.</h2>
       </div>
       <div class="steps">
-        <div class="step reveal"><div class="n">1</div><h3>Book your free audit</h3><p>We look at how your clinic handles enquiries and messages today, and where bookings are being missed.</p></div>
-        <div class="step reveal d1"><div class="n">2</div><h3>We learn your clinic</h3><p>Your setter gets to know your treatments, pricing, booking process and the way you like to speak to clients.</p></div>
-        <div class="step reveal d2"><div class="n">3</div><h3>Your diary fills</h3><p>We handle the conversations and book clients in. You do what you do best: treat them.</p></div>
+        <div class="step rv"><span class="n">Step 1</span><h3>Book your free audit</h3><p>We look at how your clinic handles enquiries and messages today, and where bookings are being missed.</p></div>
+        <div class="step rv"><span class="n">Step 2</span><h3>We learn your clinic</h3><p>Your setter gets to know your treatments, pricing, booking process and the way you speak to clients.</p></div>
+        <div class="step rv"><span class="n">Step 3</span><h3>Your diary fills</h3><p>We handle the conversations and book clients in. You do what you do best: treat them.</p></div>
       </div>
     </div>
   </section>
@@ -501,91 +445,57 @@
   <!-- AUDIT -->
   <section class="pad">
     <div class="wrap">
-      <div class="audit-box">
+      <div class="audit">
         <div>
-          <p class="eyebrow reveal">Your free audit call</p>
-          <h2 class="reveal d1">Find out how many bookings <em>you're leaving in the inbox.</em></h2>
-          <p class="lead reveal d2">A relaxed call with our team. No pressure, no hard sell, just a clear picture of the opportunity in your clinic.</p>
-          <a class="btn js-book reveal d3" href="#book">Book your free audit call
-            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <div class="label rv" style="margin-bottom:36px"><b>06</b> Your free audit call</div>
+          <h2 class="rv">Find out how many bookings you're leaving in the inbox.</h2>
+          <p class="lead rv">A relaxed call with our team. No pressure and no hard sell, just a clear picture of the opportunity in your clinic.</p>
+          <a class="btn js-book rv" href="#book">Book your free audit call <span class="arr">→</span></a>
         </div>
-        <ul class="checklist">
-          <li class="reveal"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Where enquiries are slipping through</strong><span>How fast you reply and where conversations stall.</span></div></li>
-          <li class="reveal d1"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>The opportunity in your audience</strong><span>Followers, past clients and old leads you could be booking.</span></div></li>
-          <li class="reveal d2"><div class="dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>A clear plan for your clinic</strong><span>What a setter would do for you, and whether it's the right fit.</span></div></li>
-        </ul>
+        <div>
+          <p class="rv muted" style="font-size:14px;margin-bottom:16px">On the call we'll cover</p>
+          <ul class="rows">
+            <li class="rv"><span class="n">01</span><div><h3>Where enquiries are slipping through</h3><p>How quickly you reply and where conversations stall.</p></div></li>
+            <li class="rv"><span class="n">02</span><div><h3>The opportunity in your audience</h3><p>Followers, past clients and old leads you could be booking.</p></div></li>
+            <li class="rv"><span class="n">03</span><div><h3>A clear plan for your clinic</h3><p>What a setter would do for you, and whether it's the right fit.</p></div></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- WHO -->
   <section class="pad" style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head" style="margin-bottom:40px">
-        <p class="eyebrow reveal">Who we work with</p>
-        <h2 class="reveal d1">Built for <em>clinic owners.</em></h2>
-      </div>
-      <div class="tags reveal d2">
-        <span class="tag">Aesthetics clinics</span>
-        <span class="tag">Skin clinics</span>
-        <span class="tag">Injectables</span>
-        <span class="tag">Laser &amp; skin treatments</span>
-        <span class="tag">Facialists</span>
-        <span class="tag">Medical aesthetics</span>
-        <span class="tag">Beauty &amp; wellness clinics</span>
-      </div>
+    <div class="wrap ed">
+      <div class="label rv"><b>07</b> Who it's for</div>
+      <p class="who rv">Aesthetics clinics<span>/</span>Skin clinics<span>/</span>Injectables<span>/</span>Laser &amp; skin treatments<span>/</span>Facialists<span>/</span>Medical aesthetics<span>/</span>Beauty &amp; wellness clinics</p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq pad" id="faq">
-    <div class="narrow">
-      <div class="section-head">
-        <p class="eyebrow reveal">FAQs</p>
-        <h2 class="reveal d1">Good questions.</h2>
-      </div>
-      <div class="faq-list reveal d2">
-        <details>
-          <summary>Is it really a person messaging, not AI?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>Yes. Every conversation is handled by a real, trained human setter. That's the whole point: clients booking personal treatments want a real person on the other end.</p>
-        </details>
-        <details>
-          <summary>Will it sound like my clinic?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>Your setter learns your treatments, prices and tone of voice before they start, so conversations feel like they're coming from your clinic.</p>
-        </details>
-        <details>
-          <summary>Which messages do you handle?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>New enquiries, follow ups, outreach to your engaged audience and check ins with past clients, across the channels your clinic uses. We'll map this out together on your audit call.</p>
-        </details>
-        <details>
-          <summary>How do appointments get booked?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>We work with the way you already take bookings, so clients land straight in your diary. We'll go through your setup on the call.</p>
-        </details>
-        <details>
-          <summary>What does it cost?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>It depends on your clinic and what you need. We'll walk you through the options on your free audit call, with no pressure to commit.</p>
-        </details>
-        <details>
-          <summary>Is the audit call really free?<span class="plus"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
-          <p>Completely. You'll leave with a clear view of where bookings are being missed, whether or not you decide to work with us.</p>
-        </details>
+  <section class="pad bg2" id="faq">
+    <div class="wrap ed">
+      <div class="label rv"><b>08</b> FAQs</div>
+      <div class="faq-list rv">
+        <details><summary>Is it really a person messaging, not AI?<span class="pm">+</span></summary><p>Yes. Every conversation is handled by a real, trained human setter. Clients booking personal treatments want a real person on the other end, and that's what they get.</p></details>
+        <details><summary>Will it sound like my clinic?<span class="pm">+</span></summary><p>Your setter learns your treatments, prices and tone of voice before they start, so conversations feel like they're coming from your clinic.</p></details>
+        <details><summary>Which messages do you handle?<span class="pm">+</span></summary><p>New enquiries, follow ups, outreach to your engaged audience and check ins with past clients, across the channels your clinic uses. We'll map this out together on your audit call.</p></details>
+        <details><summary>How do appointments get booked?<span class="pm">+</span></summary><p>We work with the way you already take bookings, so clients land straight in your diary. We'll go through your setup on the call.</p></details>
+        <details><summary>What does it cost?<span class="pm">+</span></summary><p>It depends on your clinic and what you need. We'll walk you through the options on your free audit call, with no pressure to commit.</p></details>
+        <details><summary>Is the audit call really free?<span class="pm">+</span></summary><p>Completely. You'll leave with a clear view of where bookings are being missed, whether or not you decide to work with us.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="final pad" id="book">
-    <div class="orb a"></div><div class="orb b"></div>
-    <div class="wrap inner">
-      <p class="eyebrow reveal">Let us take it over</p>
-      <h2 class="reveal d1">You know how important it is. <em>Now you don't have to do it.</em></h2>
-      <p class="lead reveal d2">Book your free audit call and see exactly how a Clinic Setter would fill your diary.</p>
-      <div class="reveal d3">
-        <a class="btn gold js-book" href="#book" id="final-cta">Book your free audit call
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <p class="reassure">Free, no obligation. Real people, real conversations.</p>
+  <!-- FINAL -->
+  <section class="pad final" id="book">
+    <div class="wrap">
+      <div class="label rv"><b>09</b> Let us take it over</div>
+      <h2 class="rv">You know how important it is. Now you don't have to do it.</h2>
+      <p class="lead rv">Book your free audit call and see exactly how a Clinic Setter would fill your diary.</p>
+      <div class="rv">
+        <a class="btn js-book" href="#book">Book your free audit call <span class="arr">→</span></a>
+        <p class="note">Free, no obligation. Real people, real conversations.</p>
       </div>
     </div>
   </section>
@@ -593,11 +503,11 @@
   <footer>
     <div class="wrap">
       <img src="logo.png" alt="Clinic Setters" width="1130" height="319">
-      <small>&copy; <span id="y"></span> Clinic Setters</small>
+      <span>&copy; <span id="y"></span> Clinic Setters</span>
     </div>
   </footer>
 
-  <div class="mobile-cta" id="mobileCta"><a class="btn js-book" href="#book">Book your free audit call</a></div>
+  <div class="mobile-cta" id="mobileCta"><a class="btn js-book" href="#book">Book your free audit call <span class="arr">→</span></a></div>
 
   <script>
     // Paste your booking link here (Calendly, GHL, etc.). Every "Book" button uses it.
@@ -607,34 +517,27 @@
 
     if (BOOKING_URL) {
       document.querySelectorAll('.js-book').forEach(a => {
-        a.href = BOOKING_URL;
-        a.target = '_blank';
-        a.rel = 'noopener';
+        a.href = BOOKING_URL; a.target = '_blank'; a.rel = 'noopener';
       });
     }
 
-    const nav = document.getElementById('nav');
     const mobileCta = document.getElementById('mobileCta');
     const finalSection = document.getElementById('book');
     const onScroll = () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-      const finalTop = finalSection.getBoundingClientRect().top;
-      mobileCta.classList.toggle('show', window.scrollY > 600 && finalTop > window.innerHeight);
+      mobileCta.classList.toggle('show', window.scrollY > 600 && finalSection.getBoundingClientRect().top > window.innerHeight);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-    const phone = document.getElementById('phone');
+    const chat = document.getElementById('chat');
     new IntersectionObserver((entries, obs) => {
-      if (entries[0].isIntersecting) { phone.classList.add('play'); obs.disconnect(); }
-    }, { threshold: 0.3 }).observe(phone);
+      if (entries[0].isIntersecting) { chat.classList.add('play'); obs.disconnect(); }
+    }, { threshold: 0.3 }).observe(chat);
   </script>
 </body>
 </html>
